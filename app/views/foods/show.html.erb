@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @food.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @food.name %>
+</p>
+
+<p>
+  <strong>Best before:</strong>
+  <%= @food.best_before %>
+</p>
+
+<p>
+  <strong>Expiry date:</strong>
+  <%= @food.expiry_date %>
+</p>
+
+<p>
+  <strong>Is consumed:</strong>
+  <%= @food.is_consumed %>
+</p>
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
