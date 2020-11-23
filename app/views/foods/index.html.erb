@@ -1,3 +1,15 @@
+<%
+def get_btn_class_by_date(date)
+  to_exp = (Date.parse(date.to_s) - Date.today).to_i
+  if to_exp <= 0
+    return "btn-danger"
+  elsif to_exp <= 3
+    return "btn-warning"
+  else
+    return "btn-success"
+  end
+end
+%>
 <p id="notice"><%= notice %></p>
 
 <h1>Foods</h1>
@@ -17,8 +29,8 @@
     <% @foods.each do |food| %>
       <tr>
         <td><%= food.name %></td>
-        <td><%= food.best_before %></td>
-        <td><%= food.expiry_date %></td>
+        <td><p class="btn <%= get_btn_class_by_date(food.best_before) unless food.best_before.nil? %> btn-sm"><%= food.best_before %></p></td>
+        <td><p class="btn <%= get_btn_class_by_date(food.expiry_date) unless food.expiry_date.nil? %> btn-sm"><%= food.expiry_date %></p></td>
         <td><%= food.is_consumed %></td>
         <td><%= link_to 'Show', food %></td>
         <td><%= link_to 'Edit', edit_food_path(food) %></td>
@@ -30,4 +42,5 @@
 
 <br>
 
+<%= paginate @foods %>
 <%= link_to 'New Food', new_food_path %>
