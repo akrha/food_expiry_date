@@ -1,24 +1,21 @@
-# README
+# 賞味期限管理システム（仮）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+所持している賞味・消費期限が近付いた食品を可視化し、食品ロスを削減します。
 
-* Ruby version
+## 機能一覧
 
-* System dependencies
+- ユーザー機能
+- 食品管理機能
+  - 一覧
+      - 期限が近い食品は期限部分が黄・赤色で表示される
+  - 登録
+  - 編集
+  - 削除
 
-* Configuration
+## 追加予定の機能
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- 一覧画面での「食べたものを非表示」機能
+- レスポンシブ（モバイル）対応
+- 賞味・消費期限通知機能
